@@ -11,7 +11,10 @@ employee1 = {"first_name" => "Majora", "last_name" => "Carter", "active" => true
 p "#{employee1['first_name']} #{employee1['last_name']} makes $#{employee1['salary']} per year"
 
 
-employee2 = {:first_name => "Danilo", :last_name => "Campos", :active => false, :salary => 90000}
+employee2 = {:first_name => "Danilo", :last_name => "Campos", :active => false, :salary => 90_000}
 p "#{employee2[:first_name]} #{employee2[:last_name]} makes $#{employee2[:salary]} per year"
 
-employee2_fancy {first_name : "Danilo", last_name : "Campos", active :false, salary: 90000}
+employee2_fancy ={first_name: "Danilo", last_name: "Campos", active: false, salary: 90_000}
+p "#{employee2_fancy[:first_name]} #{employee2_fancy[:last_name]} makes $#{employee2_fancy[:salary]} per year"
+
+p employee2 == employee2_fancy
